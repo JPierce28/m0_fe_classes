@@ -49,7 +49,23 @@ console.log(Vampire1)
 //  it should have a isHungry property that is true by default
 //  it should have a eat method. If the dragon eats 4 times, it is no longer hungry
   // HINT: This requires you to use your knowledge from the conditionals lesson
+  class Dragon {
+    constructor(name, rider, color){
+    this.name = name
+    this.rider = rider
+    this.color = color
+    this.eat = (`${name} is hungry`)
+    }
+    changeEat(newEat){
+      if(newEat <= 4){
+      this.eat = (`${this.name} is no longer hungry`)
+    }
+    }
 
+  }
+  var Dragon1 = new Dragon("Drogon", "Khalessi", "Red")
+  Dragon1.changeEat(4)
+  console.log(Dragon1)
 
 
 //  BIG CHALLNEGE: Write a Hobbit class
@@ -60,3 +76,32 @@ console.log(Vampire1)
 //  it should have an isAdult property (boolean) that is false by default. once a Hobbit is 33, it should be an adult
 //  it should have an isOld property that defaults to false. once a Hobbit is 101, it is old.
 //  it should have a hasRing property. If the Hobbit's name is "Frodo", true, if not, false.
+class Hobbit {
+  constructor(name, disposition,){
+    this.name = name
+    this.disposition = disposition
+    this.age = 0
+    this.Birthday = false
+    this.isAdult = false
+    this.isOld = false
+    this.hasRing = false
+  }
+  celebrateBirthday(newYear){
+    this.Birthday = true
+    if(newYear = true){
+      this.age = this.age + 1
+  }
+    if(this.age > 32){
+      this.isAdult = true
+    }
+    if(this.age >= 101){
+      this.isOld = true
+    }
+    if(this.name === "Frodo"){
+      this.hasRing = true
+    }
+  }
+}
+var Hobbit1 = new Hobbit("Frodo")
+Hobbit1.celebrateBirthday()
+console.log(Hobbit1);
