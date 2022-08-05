@@ -2,6 +2,20 @@
 // it should have a dynamic name property
 // it should have a color property, that is silver by default
 // it should have a method called "say" that returns whatever string is passed in, with "*~*" at the beginning and end of the string
+class Unicorn {
+  constructor(name){
+    this.color = "Silver";
+    this.name = name;
+  }
+  say(newSay){
+    this.say = (`*~* ${newSay} *~*`);
+  }
+}
+var Unicorn1 = new Unicorn("Josh")
+
+Unicorn1.say("hi")
+console.log(Unicorn1)
+
 
 
 
@@ -10,8 +24,23 @@
 // it should have a pet property, that is a bat, by default BUT it could be dynamic if info is passed in initially
 // it should have a thirsty property, that is true by default
 // it should have a drink method. When called, the thirsty property changes to false
-
-
+class Vampire {
+  constructor(name){
+    this.name = name
+    this.pet = "bat"
+    this.thirsty = true
+  }
+  changePet(newPet){
+    this.pet = newPet;
+  }
+    changeThirsty(newThirsty){
+      this.thirsty = false
+    }
+}
+var Vampire1 = new Vampire("Dracula")
+Vampire1.changePet("dog")
+Vampire1.changeThirsty()
+console.log(Vampire1)
 
 //  Write a Dragon class
 // it should have a dynamic name property (string)
